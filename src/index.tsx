@@ -1,8 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOMClient from "react-dom/client";
 import Main from "./components/Main";
 
-ReactDOM.render(
-  <Main/>, 
-  document.getElementById("root")
-);
+const container = document.getElementById("root");
+const root = ReactDOMClient.createRoot(container!);
+root.render(<Main/>);
